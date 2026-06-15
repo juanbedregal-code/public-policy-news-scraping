@@ -1,7 +1,7 @@
 # 📰 Alternative Data Engineering: News Scraping & NLP for Public Policy
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Web Scraping](https://img.shields.io/badge/Web_Scraping-BeautifulSoup_%7C_Selenium-43B02A?style=for-the-badge)
+![Web Scraping](https://img.shields.io/badge/Web_Scraping-BeautifulSoup_%7C_Cloudscraper-43B02A?style=for-the-badge)
 ![NLP](https://img.shields.io/badge/NLP-Sentiment_%7C_Polarity-FF9E0F?style=for-the-badge)
 ![Data Engineering](https://img.shields.io/badge/Data_Engineering-ETL_Pipelines-005b9f?style=for-the-badge)
 
