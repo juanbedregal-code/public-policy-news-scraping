@@ -26,14 +26,16 @@ This repository is organized into a robust ETL (Extract, Transform, Load) workfl
 ```text
 public-policy-news-scraping/
 ├── Data/
-│   ├── Raw/                    # Raw JSON/CSV exports from web scrapers
-│   └── Cleaned/                # Tokenized and harmonized text datasets
-├── Scrapers/                   # Python extraction modules
-│   ├── Bolivia_24h/            # Scripts for daily contemporary scraping
-│   └── Ecuador_Historical/     # Modularized historical scraping orchestrator
+│   ├── Raw/                                   # Raw JSON/CSV exports from web scrapers
+│   └── Cleaned/                               # Tokenized and harmonized text datasets
+├── Scrapers/                                  # Python extraction modules
+│   ├── Bolivia_24h/                           # Scripts for daily contemporary scraping
+│   └── Ecuador_Historical/                    # Modularized historical scraping orchestrator
+│       ├── infinitrack_earth_slicer.py        # OOP Engine
+│       └── main_orchestrator.py               # Executor
 ├── NLP_Analysis/               
-│   └── 01_sentiment_polarity_eda.ipynb  # Jupyter Notebook: Sentiment & Polarity Analysis
-└── requirements.txt            # Python dependencies (BeautifulSoup, pandas, nltk, etc.)
+│   └── 01_ecuador_oil_spill_nlp_eda.ipynb     # Jupyter Notebook: Sentiment & Polarity Analysis
+└── requirements.txt                           # Python dependencies (BeautifulSoup, pandas, nltk, etc.)
 ```
 
 ## ⚖️ Ethical Scraping Statement
