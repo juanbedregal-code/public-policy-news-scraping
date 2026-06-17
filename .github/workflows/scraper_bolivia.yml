@@ -36,6 +36,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git fetch origin main
+          git rebase origin/main
           git add Data/Raw/noticias_bo_*.csv
           git commit -m "Auto-update: Datos de prensa boliviana recolectados 🤖" || echo "No hay noticias nuevas hoy"
           git push
