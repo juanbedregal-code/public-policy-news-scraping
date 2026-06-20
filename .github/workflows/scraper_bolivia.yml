@@ -2,8 +2,8 @@ name: 🇧🇴 Bolivia 24h Scraper (Auto-Run)
 
 on:
   schedule:
-    # Ejecuta todos los días a las 04:00 UTC (Medianoche 00:00 en Bolivia / 23:00 en Ecuador)
-    - cron: '0 4 * * *'
+    # Ejecuta todos los días a las 05:00 UTC (01:00 en Bolivia / 00:00 en Ecuador)
+    - cron: '0 5 * * *'
   workflow_dispatch: # Activa un botón mágico para que puedas correrlo manualmente cuando quieras
 
 permissions:
@@ -31,13 +31,15 @@ jobs:
         run: |
           cd Scrapers/Bolivia_24h
           python bolivia_24h_tracker.py
-
+      
       - name: 5. Guardar (Commit) y subir el nuevo CSV al repositorio
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git fetch origin main
+          git stash
           git rebase origin/main
+          git stash pop || true
           git add Data/Raw/noticias_bo_*.csv
           git commit -m "Auto-update: Datos de prensa boliviana recolectados 🤖" || echo "No hay noticias nuevas hoy"
           git push
